@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.welcomeDiv {
+    display: flex;
+    justify-content: center;
+    color: gold;
+    font-size: 2.5rem;
+}
