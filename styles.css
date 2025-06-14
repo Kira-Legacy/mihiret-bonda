@@ -19,8 +19,19 @@ header h1 {
     animation: pulseEffect 3.5s infinite alternate;
 }
 
-a {
-    text-decoration: none;
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 10px 0;
+}
+
+.navContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 nav a {
@@ -29,15 +40,145 @@ nav a {
     font-size: 1.1em;
     font-weight: bold;
     padding: 5px 8px;
-    border-radius: 5px; 
+    border-radius: 5px;
     transition: background-color 0.8s ease, color 0.3s ease;
     display: inline-block;
+    text-decoration: none;
+    white-space: nowrap;
 }
 
 nav a:hover {
     color: rgb(255, 215, 0);
-    background: linear-gradient(to right, #ffd700, #ff8c00); /* Gold to DarkOrange gradient */
+    background: linear-gradient(to right, #ffd700, #ff8c00);
     color: #000000;
+}
+
+.hamburg {
+    display: none; /* Hidden by default on desktop */
+    font-size: 2em; /* Size of your icon */
+    color: white; /* Color of your icon */
+    cursor: pointer;
+    /* You might use Font Awesome icon here, or pure CSS bars */
+    position: absolute; /* Position it relative to the nav */
+    right: 25px; /* Adjust as needed */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 101; /* Ensure it's above other elements */
+    padding: 10px; /* Make it easier to click */
+    background-color: transparent; /* Ensure no background unless active */
+    border: none;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* Remove tap highlight on mobile */
+
+    /* Pure CSS Hamburger bars (optional, if not using an icon font) */
+    width: 30px;
+    height: 22px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburg::before,
+.hamburg::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.hamburg .bar {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+
+.dropdown {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0; /* Ensure it starts from the left edge */
+    width: 100%;
+    height: 100vh; /* Make it full viewport height to cover content */
+    backdrop-filter: blur(4px) brightness(40%);
+    box-shadow: 0 0 20px black;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    display: flex; /* Use flexbox for dropdown content */
+    flex-direction: column; /* Stack links vertically */
+    justify-content: center; /* Center links vertically */
+    align-items: center; /* Center links horizontally */
+    
+    /* Initial hidden state */
+    transform: translateY(-100%); /* Start completely off-screen above */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; /* Prevent clicks when hidden */
+}
+
+.dropdown.active { /* Class added by JS when menu is open */
+    transform: translateY(0); /* Slide into view */
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto; /* Allow clicks when visible */
+}
+
+.dropdown a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em; /* Larger font size for mobile links */
+    padding: 15px 0;
+    width: 80%; /* Make links wide for easier tapping */
+    text-align: center;
+    transition: background-color 0.2s linear;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separator for links */
+}
+.dropdown a:last-child {
+    border-bottom: none; /* No border for the last link */
+}
+
+.dropdown a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
+}
+
+/* Cancel (Close) Icon Styling */
+.cancel {
+    display: none; /* Hidden by default on desktop */
+    font-size: 2.5em; /* Larger size for close icon */
+    color: white;
+    cursor: pointer;
+    position: absolute; /* Position relative to .dropdown */
+    top: 20px; /* Adjust top padding */
+    right: 25px; /* Adjust right padding */
+    z-index: 102; /* Ensure it's on top */
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* Remove tap highlight on mobile */
+    /* If using pure CSS for X icon */
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cancel::before,
+.cancel::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+}
+
+.cancel::before {
+    transform: rotate(45deg);
+}
+
+.cancel::after {
+    transform: rotate(-45deg);
 }
 
 main {
@@ -53,9 +194,11 @@ main h2 {
     font-size: 2rem;
 }
 
-main p, li {
+main p,
+li {
     font-size: 1.1rem;
     line-height: 1.8;
+    text-align: justify;
 }
 
 #about_us {
@@ -65,7 +208,6 @@ main p, li {
 .ceopicture {
     display: flex;
     justify-content: center;
-
 }
 
 .ceopicture img {
@@ -73,12 +215,11 @@ main p, li {
     height: auto;
     width: 300px;
     display: block;
-    margin: 20px auto;
+    margin: 15px auto;
     border: 5px solid #046381;
     border-radius: 50%;
     transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
     filter: grayscale(0%);
-    
 }
 
 .ceopicture img:hover {
@@ -89,7 +230,7 @@ main p, li {
 
 .ceopicture figcaption {
     text-align: center;
-    margin-top: 15px;
+    margin-top: 30px;
     font-size: 1rem;
 }
 
@@ -97,34 +238,32 @@ main p, li {
     background-color: #c8f2ff;
     margin: 30px -40px;
     padding: 20px 25px;
-    position: relative; 
-    overflow: hidden; 
-    z-index: 1; 
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 
 #product_service::before {
-    content: ''; 
-    position: absolute; 
+    content: '';
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: repeating-linear-gradient(
-        45deg,
-        rgba(255, 255, 255, 0.2) 0px, 
-        rgba(255, 255, 255, 0.2) 10px,
-        transparent 10px,
-        transparent 20px
-    ); 
+    background-image: repeating-linear-gradient(45deg,
+            rgba(255, 255, 255, 0.2) 0px,
+            rgba(255, 255, 255, 0.2) 10px,
+            transparent 10px,
+            transparent 20px);
     opacity: 0.5;
-    z-index: -1; 
-    transform: rotate(5deg) scale(1.2); 
-    transition: transform 0.8s ease-out, opacity 0.8s ease-out; 
+    z-index: -1;
+    transform: rotate(5deg) scale(1.2);
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
 }
 
 #product_service:hover::before {
-    transform: rotate(0deg) scale(1); 
-    opacity: 0.9; 
+    transform: rotate(0deg) scale(1);
+    opacity: 0.9;
 }
 
 ul li {
@@ -141,6 +280,44 @@ ul li {
 
 #contact_us h4 {
     font-size: 1.15rem;
+}
+
+#location {
+    margin-top: 65px;
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+#location h3 a {
+    color: #046381;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#location h3 a:hover {
+    text-decoration: underline;
+}
+
+.locationContainer {
+    position: relative;
+    padding-bottom: 50%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 30px auto;
+}
+
+.locationContainer iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 8px;
 }
 
 footer {
@@ -165,36 +342,59 @@ footer {
     }
 
     nav a {
-        margin: 8px 0; 
+        margin: 8px 0;
         font-size: 0.9em;
-        padding: 5px 15px; 
+        padding: 5px 15px;
     }
 
+    .navContainer { /* Hide desktop navigation links on mobile */
+        display: none; 
+    }
+
+    .hamburg { /* Show hamburger icon on mobile */
+        display: flex; /* Use flex to align its bars if using pure CSS icon */
+    }
+
+    /* .cancel is controlled by .dropdown.active, but ensure its base display is also flex on mobile */
+    .cancel {
+        display: flex; 
+    }
+
+    nav { /* Adjust nav for mobile to center icon */
+        justify-content: flex-end; /* Position hamburger to the right */
+        padding-right: 25px; /* Ensure space for the icon */
+    }
+
+    /* Remove previous nav a rules here as they apply to .navContainer which is hidden */
+    
+    /* ... rest of your max-width: 600px rules ... */
+
     main {
-        width: 95%; 
+        width: 95%;
         margin: 15px auto;
-        padding: 15px; 
+        padding: 15px;
     }
 
     main h2 {
         font-size: 1.6rem;
     }
 
-    main p, li {
-        font-size: 1rem; 
+    main p,
+    li {
+        font-size: 1rem;
     }
 
     .ceopicture img {
-        width: 200px; 
+        width: 200px;
         height: 200px;
     }
-    
+
     .ceopicture img:hover {
-        transform: rotate(-5deg) scale(1.1); 
+        transform: rotate(-5deg) scale(1.1);
     }
 
     #product_service {
-        margin: 20px -15px; 
+        margin: 20px -15px;
         padding: 15px;
     }
 
@@ -204,6 +404,10 @@ footer {
 
     #contact_us h4 {
         font-size: 1.05rem;
+    }
+
+    .locationContainer {
+        padding-bottom: 75%;
     }
 
     footer {
@@ -221,67 +425,137 @@ footer {
         margin: 0 18px;
         font-size: 1.1em;
     }
+    .hamburg, .cancel, .dropdown {
+        display: none;
+    }
+    .navContainer {
+        display: flex; /* Ensure desktop nav is visible */
+    }
+    nav {
+        justify-content: center; /* Center on tablet */
+    }
 
     main {
-        width: 85%; 
+        width: 85%;
         padding: 25px 30px;
     }
-    
+
     .ceopicture img {
         width: 250px;
         height: 250px;
     }
 
     #product_service {
-        margin: 30px -30px; 
+        margin: 30px -30px;
         padding: 25px 30px;
+    }
+
+    .locationContainer {
+        padding-bottom: 60%;
     }
 }
 
 @media (min-width: 993px) {
     main {
-        width: 80%; 
-        max-width: 1400px; 
+        width: 80%;
+        max-width: 1400px;
         padding: 30px 40px;
     }
 
     header h1 {
         font-size: 3.5em;
     }
+
     nav a {
         margin: 0 30px;
         font-size: 1.3em;
     }
 
+    .hamburg, .cancel, .dropdown {
+        display: none;
+    }
+    .navContainer {
+        display: flex; /* Ensure desktop nav is visible */
+    }
+    nav {
+        justify-content: center; /* Center on desktop */
+    }
+
     .ceopicture img {
-        width: 400px; 
+        width: 400px;
         height: 400px;
     }
 }
 
 @keyframes pulseEffect {
-    0% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.02); opacity: 0.9; } 
-    100% { transform: scale(1); opacity: 1; }
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.02);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 @keyframes rainbowText {
-    0% { color: #f00; } 
-    16% { color: #ff0; } 
-    33% { color: #0f0; }
-    50% { color: #0ff; } 
-    66% { color: #00f; } 
-    83% { color: #f0f; } 
-    100% { color: #f00; } 
+    0% {
+        color: #f00;
+    }
+
+    16% {
+        color: #ff0;
+    }
+
+    33% {
+        color: #0f0;
+    }
+
+    50% {
+        color: #0ff;
+    }
+
+    66% {
+        color: #00f;
+    }
+
+    83% {
+        color: #f0f;
+    }
+
+    100% {
+        color: #f00;
+    }
 }
 
 @keyframes footerEntrance {
-    0% { transform: translateY(100%); opacity: 0; } 
-    100% { transform: translateY(0); opacity: 1; }
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 @keyframes backgroundPulse {
-    0% { background-color: #000000; }
-    50% { background-color: #034150; } 
-    100% { background-color: #046381; }
+    0% {
+        background-color: #000000;
+    }
+
+    50% {
+        background-color: #034150;
+    }
+
+    100% {
+        background-color: #046381;
+    }
 }
