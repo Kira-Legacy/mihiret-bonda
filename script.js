@@ -1,6 +1,16 @@
 const date = new Date();
 const year = date.getFullYear();
 
+function hamburg() {
+    const navbar = document.querySelector(".dropdown")
+    navbar.style.transform = "translateY(0px)"
+}
+
+function cancel() {
+    const navbar = document.querySelector(".dropdown")
+    navbar.style.transform = "translateY(-500px)"
+}
+
 const yearDisplay = document.getElementById("yearContainer");
 yearDisplay.innerHTML = year;
 
@@ -9,7 +19,6 @@ function toggleMobileMenu() {
     mobileMenu.classList.toggle("active");
 }
 
-// Optional: Close menu when a link is clicked (for smoother navigation)
 document.querySelectorAll('.dropdown a').forEach(link => {
     link.addEventListener('click', () => {
         const mobileMenu = document.querySelector(".dropdown");
