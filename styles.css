@@ -361,7 +361,7 @@ footer {
 
 @media (max-width: 600px) {
     header h1 {
-        font-size: 1.8em;
+        font-size: 1.65em;
     }
 
     nav {
@@ -377,7 +377,6 @@ footer {
     }
 
     .navContainer {
-        /* Hide desktop navigation links on mobile */
         display: none;
     }
 
@@ -451,7 +450,7 @@ footer {
     }
 
     nav a {
-        margin: 0;
+        margin: 10px;
         font-size: 1.1em;
     }
 
