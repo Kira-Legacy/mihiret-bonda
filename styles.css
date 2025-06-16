@@ -99,7 +99,7 @@ nav a:hover {
     top: 0;
     left: 0;
     width: 100%;
-    height: 50vh;
+    height: 75vh;
     backdrop-filter: blur(4px) brightness(40%);
     box-shadow: 0 0 20px black;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
@@ -450,7 +450,7 @@ footer {
     }
 
     nav a {
-        margin: 10px;
+        margin: 5px;
         font-size: 1.1em;
     }
 
@@ -504,7 +504,7 @@ footer {
     }
 
     nav a {
-        margin: 0 30px;
+        margin: 0 20px;
         font-size: 1.3em;
     }
 
