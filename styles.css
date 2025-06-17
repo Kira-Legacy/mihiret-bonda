@@ -270,7 +270,11 @@ ul li {
 
 .teamcontainer {
     display: flex;
-    animation: marquee 15s linear infinite;
+    animation: marquee 25s linear infinite;
+}
+
+.teamcontainer:hover {
+    animation: none;
 }
 
 .ceopictureteam,
@@ -310,33 +314,16 @@ ul li {
     font-size: 1rem;
 }
 
-#contact_us {
-    margin-top: 45px;
-}
-
-#contact_us h3 {
-    font-size: 1.3rem;
-}
-
-#contact_us h4 {
-    font-size: 1.15rem;
-}
-
-#contact_us ul a {
-    text-decoration: none;
-}
-
-#location {
-    text-align: center;
-    background-color: #c8f2ff;
-    margin: 0px -40px;
+#contact {
+    margin: 20px -40px;
     padding: 0px 25px 40px 25px;
+    background-color: #c8f2ff;
     position: relative;
     overflow: hidden;
     z-index: 1;
 }
 
-#location::before {
+#contact::before {
     content: '';
     position: absolute;
     top: 0;
@@ -354,9 +341,25 @@ ul li {
     transition: transform 0.8s ease-out, opacity 0.8s ease-out;
 }
 
-#location:hover::before {
+#contact:hover::before {
     transform: rotate(0deg) scale(1);
     opacity: 0.9;
+}
+
+#contact h3 {
+    font-size: 1.3rem;
+}
+
+#contact h4 {
+    font-size: 1.15rem;
+}
+
+#contact ul a {
+    text-decoration: none;
+}
+
+#location {
+    text-align: center;
 }
 
 #location h3 a {
@@ -464,15 +467,36 @@ footer {
         padding: 15px;
     }
 
+    #team {
+        font-size: 1.2rem;
+    }
+
     .teamcontainer {
         flex-direction: column;
     }
 
-    #contact_us h3 {
+    .ceopictureteam img,
+    .csopicture img,
+    .ctopicture img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .ceopictureteam img:hover,
+    .csopicture img:hover,
+    .ctopicture img:hover {
+        transform: rotate(-5deg) scale(1.1);
+    }
+
+    #contact {
+        margin: 0 -15px;
+    }
+
+    #contact h3 {
         font-size: 1.2rem;
     }
 
-    #contact_us h4 {
+    #contact h4 {
         font-size: 1.05rem;
     }
 
@@ -529,6 +553,19 @@ footer {
         padding: 25px 30px;
     }
 
+    .ceopictureteam img,
+    .csopicture img,
+    .ctopicture img {
+        width: 250px;
+        height: auto;
+    }
+
+    .ceopictureteam figcaption,
+    .csopicture figcaption,
+    .ctopicture figcaption {
+        font-size: 0.8rem;
+    }
+
     #location {
         margin: 0px -30px;
     }
@@ -571,6 +608,10 @@ footer {
     .ceopicture img {
         width: 400px;
         height: 400px;
+    }
+
+    #team {
+        font-size: 1.5rem;
     }
 }
 
@@ -625,8 +666,9 @@ footer {
     0% {
         transform: translateX(0);
     }
+
     100% {
-        transform: translateX(-100%);
+        transform: translateX(100%);
     }
 }
 
