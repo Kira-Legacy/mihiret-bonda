@@ -19,6 +19,49 @@ header h1 {
     animation: pulseEffect 3.5s infinite alternate;
 }
 
+.goog-te-gadget img {
+    display: none !important;
+  }
+
+  .goog-te-combo {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #fff;
+    color: #333;
+  }
+  /* Style the dropdown arrow */
+  .goog-te-combo-arrow {
+    display: none; /* Hide the default dropdown arrow */
+  }
+  /* Style the language options */
+  .goog-te-menu-value {
+    font-size: 14px;
+    color: #333;
+  }
+#languages {
+    opacity: 0;
+    position: absolute;
+    visibility: hidden;
+    z-index: 1;
+}
+
+li:hover #languages {
+    opacity: 1;
+    top: 60px;
+    left: -40px;
+    visibility: visible;
+}
+
+#languages li a:hover {
+    background-color: rgb(253, 143, 0);
+}
+
+#languages li {
+    width: 100%;
+}
+
 nav {
     display: flex;
     justify-content: center;

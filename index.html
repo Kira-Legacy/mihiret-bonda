@@ -11,32 +11,39 @@
 <body>
     <header>
         <h1>Welcome to Mihiret Bonda 😊</h1>
-        <nav>
+        <li>
 
-            <div class="navContainer">
-                <a href="#">Home</a>
-                <a href="#about_us">About Us</a>
-                <a href="#product_service">Products & Services</a>
-                <a href="#team">Team</a>
-                <a href="#contact">Contact</a>
-                <a href="#location">Location</a>
+            <div><a href="#languages" class="link">Language</a>
+                <div id="languages">
+                    <div id="google_translate_element"></div>
+                </div>
             </div>
+            <nav>
 
-            <i class="hamburg" id="hamburg" onclick="toggleMobileMenu()">
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </i>
+                <div class="navContainer">
+                    <a href="#">Home</a>
+                    <a href="#about_us">About Us</a>
+                    <a href="#product_service">Products & Services</a>
+                    <a href="#team">Team</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#location">Location</a>
+                </div>
 
-            <div class="dropdown" id="dropdown">
-                <i class="cancel" id="cancel" onclick="toggleMobileMenu()"></i>
-                <a href="#">Home</a>
-                <a href="#about_us">About Us</a>
-                <a href="#product_service">Products & Services</a>
-                <a href="#team">Team</a>
-                <a href="#contact">Contact</a>
-                <a href="#location">Location</a>
-            </div>
-        </nav>
+                <i class="hamburg" id="hamburg" onclick="toggleMobileMenu()">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </i>
+
+                <div class="dropdown" id="dropdown">
+                    <i class="cancel" id="cancel" onclick="toggleMobileMenu()"></i>
+                    <a href="#">Home</a>
+                    <a href="#about_us">About Us</a>
+                    <a href="#product_service">Products & Services</a>
+                    <a href="#team">Team</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#location">Location</a>
+                </div>
+            </nav>
     </header>
 
     <main>
@@ -167,7 +174,6 @@
 
     </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="script.js"></script>
 </body>
 

@@ -24,10 +24,30 @@ document.querySelectorAll('.dropdown a').forEach(link => {
     });
 });
 
-
 const date = new Date();
 const year = date.getFullYear();
 
 const yearDisplay = document.getElementById("yearContainer");
 yearDisplay.innerHTML = year;
+
+function googleTranslateElementInit() {
+    script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+    new google.translate.TranslateElement(
+        {
+            pageLanguage: "en",
+            includedLanguages: "en,am",
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false,
+        },
+        "google_translate_element"
+    );
+
+    var englishParagraph = document.getElementById("english_paragraph");
+    if (englishParagraph) {
+        google.translate.TranslateElement(
+            { pageLanguage: "en" },
+            "english_paragraph"
+        );
+    }
+}
 
