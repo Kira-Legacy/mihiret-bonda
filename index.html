@@ -6,44 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mihiret Bonda Website</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./assets/Mihiret_bonda_logo.jpg">
 </head>
 
 <body>
     <header>
         <h1>Welcome to Mihiret Bonda 😊</h1>
-        <li>
+        <!-- <li>
 
             <div><a href="#languages" class="link">Language</a>
                 <div id="languages">
                     <div id="google_translate_element"></div>
                 </div>
+            </div> -->
+        <nav>
+
+            <div class="navContainer">
+                <a href="#">Home</a>
+                <a href="#about_us">About Us</a>
+                <a href="#product_service">Products & Services</a>
+                <a href="#contact">Contact</a>
+                <a href="#location">Location</a>
             </div>
-            <nav>
 
-                <div class="navContainer">
-                    <a href="#">Home</a>
-                    <a href="#about_us">About Us</a>
-                    <a href="#product_service">Products & Services</a>
-                    <a href="#team">Team</a>
-                    <a href="#contact">Contact</a>
-                    <a href="#location">Location</a>
-                </div>
+            <i class="hamburg" id="hamburg" onclick="toggleMobileMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </i>
 
-                <i class="hamburg" id="hamburg" onclick="toggleMobileMenu()">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </i>
-
-                <div class="dropdown" id="dropdown">
-                    <i class="cancel" id="cancel" onclick="toggleMobileMenu()"></i>
-                    <a href="#">Home</a>
-                    <a href="#about_us">About Us</a>
-                    <a href="#product_service">Products & Services</a>
-                    <a href="#team">Team</a>
-                    <a href="#contact">Contact</a>
-                    <a href="#location">Location</a>
-                </div>
-            </nav>
+            <div class="dropdown" id="dropdown">
+                <i class="cancel" id="cancel" onclick="toggleMobileMenu()"></i>
+                <a href="#">Home</a>
+                <a href="#about_us">About Us</a>
+                <a href="#product_service">Products & Services</a>
+                <a href="#contact">Contact</a>
+                <a href="#location">Location</a>
+            </div>
+        </nav>
     </header>
 
     <main>
@@ -67,6 +66,42 @@
                     </figure>
                 </div>
             </article>
+
+            <h3>Our Team</h2>
+
+                <article id="team">
+                    <div class="teamcontainer">
+                        <div class="ceopictureteam">
+                            <figure>
+                                <img src="assets/Mihiret_CEO_team.jpg" alt="Sister Mihiret Dechassa Joro" />
+                                <figcaption><strong><i>Sister Mihiret Dechassa</i></strong><br>
+                                    <i>Founder and Chief Executive Officer</i><br>
+                                    April 20, 2023 - Present
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="csopicture">
+                            <figure>
+                                <img src="assets/Bezawit_CSO_team.jpg" alt="Bezawit Bekele">
+                                <figcaption><strong><i>Bezawit Bekele</i></strong><br>
+                                    <i>Chief Sales Officer</i><br>
+                                    September 01, 2024 - Present
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="ctopicture">
+                            <figure>
+                                <img src="assets/Kirubel_CTO_team.jpg" alt="Kirubel Eshetu">
+                                <figcaption><strong><i>Kirubel Eshetu</i></strong><br>
+                                    <i>Chief Technology Officer</i><br>
+                                    April 20, 2023 - Present
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </article>
         </section>
 
         <section id="product_service">
@@ -84,43 +119,6 @@
                     <li><strong>M-Pesa agent services</strong></li>
                     <li><strong>Electricity, water, airlines and National Id printing payments</strong></li>
                 </ul>
-            </article>
-        </section>
-
-        <section id="team">
-            <h2>Here are our Team Members</h2>
-            <article>
-                <div class="teamcontainer">
-                    <div class="ceopictureteam">
-                        <figure>
-                            <img src="assets/Mihiret_CEO_team.jpg" alt="Sister Mihiret Dechassa Joro" />
-                            <figcaption><strong><i>Sister Mihiret Dechassa</i></strong><br>
-                                <i>Founder and Chief Executive Officer</i><br>
-                                April 20, 2023 - Present
-                            </figcaption>
-                        </figure>
-                    </div>
-
-                    <div class="csopicture">
-                        <figure>
-                            <img src="assets/Bezawit_CSO_team.jpg" alt="Bezawit Bekele">
-                            <figcaption><strong><i>Bezawit Bekele</i></strong><br>
-                                <i>Chief Sales Officer</i><br>
-                                September 01, 2024 - Present
-                            </figcaption>
-                        </figure>
-                    </div>
-
-                    <div class="ctopicture">
-                        <figure>
-                            <img src="assets/Kirubel_CTO_team.jpg" alt="Kirubel Eshetu">
-                            <figcaption><strong><i>Kirubel Eshetu</i></strong><br>
-                                <i>Chief Technology Officer</i><br>
-                                April 20, 2023 - Present
-                            </figcaption>
-                        </figure>
-                    </div>
-                </div>
             </article>
         </section>
 

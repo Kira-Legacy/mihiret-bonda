@@ -15,31 +15,32 @@ header {
 
 header h1 {
     margin-top: 0;
-    font-size: 2.5em;
+    font-size: 3.0em;
     animation: pulseEffect 3.5s infinite alternate;
 }
 
 .goog-te-gadget img {
     display: none !important;
-  }
+}
 
-  .goog-te-combo {
+.goog-te-combo {
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
     background-color: #fff;
     color: #333;
-  }
-  /* Style the dropdown arrow */
-  .goog-te-combo-arrow {
-    display: none; /* Hide the default dropdown arrow */
-  }
-  /* Style the language options */
-  .goog-te-menu-value {
+}
+
+.goog-te-combo-arrow {
+    display: none;
+}
+
+.goog-te-menu-value {
     font-size: 14px;
     color: #333;
-  }
+}
+
 #languages {
     opacity: 0;
     position: absolute;
@@ -80,7 +81,7 @@ nav {
 nav a {
     color: rgb(255, 255, 255);
     margin: 0 15px;
-    font-size: 1.1em;
+    font-size: 1.5rem;
     font-weight: bold;
     padding: 5px 8px;
     border-radius: 5px;
@@ -142,7 +143,7 @@ nav a:hover {
     top: 0;
     left: 0;
     width: 100%;
-    height: 75vh;
+    height: 50vh;
     backdrop-filter: blur(4px) brightness(40%);
     box-shadow: 0 0 20px black;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
@@ -227,12 +228,16 @@ main {
 
 main h2 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
+}
+
+main h3 {
+    font-size: 2.0rem;
 }
 
 main p,
 li {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     line-height: 1.8;
     text-align: justify;
 }
@@ -267,7 +272,7 @@ li {
 .ceopicture figcaption {
     text-align: center;
     margin-top: 30px;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 ul li {
@@ -282,7 +287,7 @@ ul li {
 #product_service {
     background-color: #c8f2ff;
     margin: 30px -40px;
-    padding: 20px 25px;
+    padding: 20px 40px;
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -313,11 +318,21 @@ ul li {
 
 .teamcontainer {
     display: flex;
-    animation: marquee 25s linear infinite;
+    animation: marquee 15s linear infinite alternate;
+    justify-content: center;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(-15%);
+    }
+    100% {
+        transform: translateX(15%);
+    }
 }
 
 .teamcontainer:hover {
-    animation: none;
+    animation: paused;
 }
 
 .ceopictureteam,
@@ -354,10 +369,27 @@ ul li {
 .ctopicture figcaption {
     text-align: center;
     margin-top: 30px;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 #contact {
+    margin: 20px 0px;
+}
+
+#contact h3 {
+    font-size: 1.7rem;
+}
+
+#contact h4 {
+    font-size: 1.4rem;
+}
+
+#contact ul a {
+    text-decoration: none;
+}
+
+#location {
+    text-align: center;
     margin: 20px -40px;
     padding: 0px 25px 40px 25px;
     background-color: #c8f2ff;
@@ -366,7 +398,7 @@ ul li {
     z-index: 1;
 }
 
-#contact::before {
+#location::before {
     content: '';
     position: absolute;
     top: 0;
@@ -384,25 +416,9 @@ ul li {
     transition: transform 0.8s ease-out, opacity 0.8s ease-out;
 }
 
-#contact:hover::before {
+#location:hover::before {
     transform: rotate(0deg) scale(1);
     opacity: 0.9;
-}
-
-#contact h3 {
-    font-size: 1.3rem;
-}
-
-#contact h4 {
-    font-size: 1.15rem;
-}
-
-#contact ul a {
-    text-decoration: none;
-}
-
-#location {
-    text-align: center;
 }
 
 #location h3 a {
@@ -442,14 +458,14 @@ footer {
     background-color: #046381;
     padding: 25px 0;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     animation: backgroundPulse 5s infinite alternate ease-in-out;
 }
 
 
 @media (max-width: 600px) {
     header h1 {
-        font-size: 1.65em;
+        font-size: 1.95em;
     }
 
     nav {
@@ -460,7 +476,7 @@ footer {
 
     nav a {
         margin: 8px 0;
-        font-size: 0.9em;
+        font-size: 1em;
         padding: 5px 15px;
     }
 
@@ -491,9 +507,17 @@ footer {
         font-size: 1.6rem;
     }
 
+    main h3 {
+        font-size: 1.3rem;
+    }
+
     main p,
     li {
-        font-size: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .ceopicture figcaption {
+        font-size: 1.0rem;
     }
 
     .ceopicture img {
@@ -510,12 +534,12 @@ footer {
         padding: 15px;
     }
 
-    #team {
-        font-size: 1.2rem;
-    }
-
     .teamcontainer {
         flex-direction: column;
+    }
+
+    .teamcontainer figcaption {
+        font-size: 0.9rem;
     }
 
     .ceopictureteam img,
@@ -529,10 +553,6 @@ footer {
     .csopicture img:hover,
     .ctopicture img:hover {
         transform: rotate(-5deg) scale(1.1);
-    }
-
-    #contact {
-        margin: 0 -15px;
     }
 
     #contact h3 {
@@ -553,22 +573,30 @@ footer {
 
     footer {
         padding: 15px 0;
-        font-size: 1.0rem;
+        font-size: 1.2rem;
     }
+
+    @keyframes marquee {
+    0% {
+        transform: translateX(-30%);
+    }
+    100% {
+        transform: translateX(30%);
+    }
+}
 }
 
 @media (min-width: 601px) and (max-width: 992px) {
     header h1 {
-        font-size: 2.5em;
+        font-size: 2.4em;
     }
 
     nav a {
-        margin: 0.5px;
-        font-size: 1.1em;
+        margin: 7px;
+        font-size: 1.15em;
     }
 
     .hamburg,
-    .cancel,
     .dropdown {
         display: none;
     }
@@ -586,6 +614,15 @@ footer {
         padding: 25px 30px 0px 30px;
     }
 
+    main p,
+    li {
+        font-size: 1.13rem;
+    }
+
+    main h3 {
+        font-size: 1.35rem;
+    }
+
     .ceopicture img {
         width: 250px;
         height: 250px;
@@ -596,17 +633,21 @@ footer {
         padding: 25px 30px;
     }
 
+    .ceopicture figcaption {
+        font-size: 0.9rem;
+    }
+
     .ceopictureteam img,
     .csopicture img,
     .ctopicture img {
-        width: 250px;
+        width: 300px;
         height: auto;
     }
 
     .ceopictureteam figcaption,
     .csopicture figcaption,
     .ctopicture figcaption {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 
     #location {
@@ -616,6 +657,15 @@ footer {
     .locationContainer {
         padding-bottom: 60%;
     }
+
+    @keyframes marquee {
+    0% {
+        transform: translateX(-9%);
+    }
+    100% {
+        transform: translateX(9%);
+    }
+}
 }
 
 @media (min-width: 993px) {
@@ -631,7 +681,7 @@ footer {
 
     nav a {
         margin: 0 25px;
-        font-size: 1.3em;
+        font-size: 1.5m;
     }
 
     .hamburg,
@@ -702,16 +752,6 @@ footer {
 
     100% {
         color: #f00;
-    }
-}
-
-@keyframes marquee {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(100%);
     }
 }
 
