@@ -5,4 +5,4 @@
 - Building a clean, interactive and responsive frontend.
 
 ## Phase 2
-- Will come.
+- Coming Soon...
