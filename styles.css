@@ -143,7 +143,7 @@ nav a:hover {
     top: 0;
     left: 0;
     width: 100%;
-    height: 50vh;
+    height: 75vh;
     backdrop-filter: blur(4px) brightness(40%);
     box-shadow: 0 0 20px black;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
@@ -167,7 +167,7 @@ nav a:hover {
 .dropdown a {
     color: rgb(255, 255, 255);
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 1.45em;
     padding: 15px 0;
     width: 80%;
     text-align: center;
@@ -185,11 +185,11 @@ nav a:hover {
 
 .cancel {
     display: none;
-    font-size: 2.5em;
+    font-size: 2.45em;
     color: rgb(255, 255, 255);
     cursor: pointer;
     position: absolute;
-    top: 20px;
+    top: 10px;
     right: 25px;
     z-index: 102;
     -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
@@ -228,16 +228,16 @@ main {
 
 main h2 {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2.0rem;
 }
 
 main h3 {
-    font-size: 2.0rem;
+    font-size: 1.5rem;
 }
 
 main p,
 li {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 1.8;
     text-align: justify;
 }
@@ -272,7 +272,7 @@ li {
 .ceopicture figcaption {
     text-align: center;
     margin-top: 30px;
-    font-size: 1.2rem;
+    font-size: 1.0rem;
 }
 
 ul li {
@@ -318,16 +318,16 @@ ul li {
 
 .teamcontainer {
     display: flex;
-    animation: marquee 15s linear infinite alternate;
+    animation: marquee 10s linear infinite alternate;
     justify-content: center;
 }
 
 @keyframes marquee {
     0% {
-        transform: translateX(-15%);
+        transform: translateX(7.5%);
     }
     100% {
-        transform: translateX(15%);
+        transform: translateX(-7.5%);
     }
 }
 
@@ -369,7 +369,7 @@ ul li {
 .ctopicture figcaption {
     text-align: center;
     margin-top: 30px;
-    font-size: 1.2rem;
+    font-size: 1.0rem;
 }
 
 #contact {
@@ -377,11 +377,11 @@ ul li {
 }
 
 #contact h3 {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
 }
 
 #contact h4 {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
 }
 
 #contact ul a {
@@ -465,7 +465,7 @@ footer {
 
 @media (max-width: 600px) {
     header h1 {
-        font-size: 1.95em;
+        font-size: 1.8em;
     }
 
     nav {
@@ -476,7 +476,7 @@ footer {
 
     nav a {
         margin: 8px 0;
-        font-size: 1em;
+        font-size: 1.2em;
         padding: 5px 15px;
     }
 
@@ -508,16 +508,16 @@ footer {
     }
 
     main h3 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     main p,
     li {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .ceopicture figcaption {
-        font-size: 1.0rem;
+        font-size: 0.9rem;
     }
 
     .ceopicture img {
@@ -556,11 +556,11 @@ footer {
     }
 
     #contact h3 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     #contact h4 {
-        font-size: 1.05rem;
+        font-size: 1.0rem;
     }
 
     #location {
@@ -578,10 +578,10 @@ footer {
 
     @keyframes marquee {
     0% {
-        transform: translateX(-30%);
+        transform: translateX(-22%);
     }
     100% {
-        transform: translateX(30%);
+        transform: translateX(22%);
     }
 }
 }
@@ -592,8 +592,8 @@ footer {
     }
 
     nav a {
-        margin: 7px;
-        font-size: 1.15em;
+        margin: 5px;
+        font-size: 1.2em;
     }
 
     .hamburg,
@@ -616,7 +616,7 @@ footer {
 
     main p,
     li {
-        font-size: 1.13rem;
+        font-size: 1.1rem;
     }
 
     main h3 {
@@ -647,7 +647,7 @@ footer {
     .ceopictureteam figcaption,
     .csopicture figcaption,
     .ctopicture figcaption {
-        font-size: 0.9rem;
+        font-size: 0.75rem;
     }
 
     #location {
